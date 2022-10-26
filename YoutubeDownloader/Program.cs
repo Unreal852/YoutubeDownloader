@@ -15,7 +15,7 @@ public static class Program
     public static void Main(string[] args)
     {
         PrintHeader();
-        
+
         UrlInputResult url = AskYoutubeUrl();
         HandleInput(url);
     }
@@ -59,8 +59,8 @@ public static class Program
             Thread.Sleep(100); // Try to avoid being rate limited by youtube.
         }
 
-        AnsiConsole.Markup("[green3]Videos have been downloaded in your downloads folder.[/]");
-        AnsiConsole.Markup("[gold3]Press any key to exit.[/]");
+        AnsiConsole.MarkupLine("[green3]Videos have been downloaded in your downloads folder.[/]");
+        AnsiConsole.MarkupLine("[gold3]Press any key to exit.[/]");
 
         while (!Console.KeyAvailable)
         {
